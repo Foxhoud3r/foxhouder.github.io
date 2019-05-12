@@ -1,0 +1,40 @@
+.intro {
+  background: url("../images/intro/header_salad_background.png") center center/cover no-repeat;
+  position: relative; }
+
+.intro_container {
+  justify-content: flex-start;
+  position: relative; }
+
+.intro__content {
+  display: flex;
+  align-items: center;
+  flex: .8; }
+
+.intro__content-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; }
+
+.content__title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #f9b43b;
+  font-size: 72px;
+  margin-bottom: 20px;
+  line-height: 1; }
+  .content__title--color-black {
+    color: #000; }
+  .content__title--centered {
+    text-align: center; }
+
+.content__text {
+  font-family: 'Lifehack-Medium';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 65px;
+  line-height: 1; }
+
+/*# sourceMappingURL=intro.css.map */

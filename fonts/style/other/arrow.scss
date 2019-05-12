@@ -1,0 +1,15 @@
+.arrow{border-radius: 2px;
+    border: solid #ededee;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.down{
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+}
+

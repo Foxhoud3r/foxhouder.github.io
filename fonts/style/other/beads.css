@@ -1,0 +1,38 @@
+.beads {
+  position: absolute;
+  display: flex;
+  top: 12%;
+  left: 102%;
+  display: flex;
+  flex-direction: column; }
+
+.beads__conteiner {
+  display: flex;
+  flex-direction: column; }
+
+.beads_itm {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid transparent; }
+
+.beads__ref {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .beads__ref::after {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    content: ''; }
+
+.active {
+  border: 1px solid #ffffff; }
+
+/*# sourceMappingURL=beads.css.map */
