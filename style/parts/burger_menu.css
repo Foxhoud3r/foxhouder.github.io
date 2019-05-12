@@ -1,5 +1,5 @@
 .bgmenu {
-  background: url("/images/menu/menu_back.png") center center/cover no-repeat;
+  background: url("../images/menu/menu_back.png") center center/cover no-repeat;
   position: relative;
   display: flex; }
 
