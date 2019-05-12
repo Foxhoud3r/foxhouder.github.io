@@ -1,0 +1,59 @@
+input {
+    display: none;
+}
+
+label {
+    color: #ffffff;
+    font-family: 'Gagalin-Regular';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.arrow__team {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+
+    border-bottom: 6px solid #f9b43b;
+    margin-right: 10px;
+    animation-fill-mode: forwards;  
+}
+
+input:checked~label{    color: #f9b43b;}
+
+input:checked~.arrow__team{    transition: 0.4ms;
+    animation-name: rotateit;
+    -webkit-animation-name: rotateit;
+    animation-duration: 0.4s;}
+
+@keyframes rotateit{
+    from { -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);}
+
+    20%{ -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);}
+
+    40%{ -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);}
+
+    60%{ -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);}
+
+    70%{ -webkit-transform: rotate(115deg);
+            transform: rotate(115deg);}
+        
+    
+    80%{ -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);}
+
+        90%{ -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);}
+    
+
+    to{ -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);}
+}
+
+div > input:checked ~ .team__desc { overflow: visible }

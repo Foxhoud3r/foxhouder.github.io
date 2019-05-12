@@ -1,0 +1,27 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalize
+@import "./other/normalize.scss";
+
+// setups
+@import "./other/fonts.scss";
+@import "./other/baseformat.scss";
+
+//parts
+@import "./parts/weare.scss";
+@import "./parts/intro.scss";
+@import "./other/beads.scss";
+@import "./parts/review.scss";
+@import "./parts/review_obj.scss";
+@import "./parts/header.scss";
+@import "./parts/menu.scss";
+@import "./parts/buttons.scss";
+@import "./other/arrow.scss";
+@import "./parts/team.scss";
+@import "./parts/burger_menu.scss";
+@import "./parts/delivery.scss";
+//@import "./other/accordeon_team.scss";

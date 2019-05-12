@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.header__logo{padding-top: 12px;}
+
+.header__order{margin-left:15px;}
