@@ -1,6 +1,11 @@
 .delivery {
     background: url('../images/order/order_back.png') center center / cover no-repeat;
     position: relative;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 INPUT.checkbox,
@@ -18,23 +23,38 @@ input.checkball {
 }
 
 .delivery_h {
-    display: block;
+    
+    display: flex;
     font-family: 'Gagalin-Regular';
     color: #f9b43b;
-
-    font-size: 72px;
+    font-size: torem(72px);
     font-weight: 400;
+    text-align: center;
+    margin-bottom:torem(42px);
+    @include phones{font-size: torem(50px);
+        margin-bottom:torem(20px);
+    max-width: 50%;}
 }
 
 .delivery__box {
     display: flex;
     width: 100%;
     height: 100%;
+
+    @include tablets{width: 80%;}
 }
 
 .form {
     display: flex;
-    width: 80%;
+    width:90%;
+    @include tablets{
+        flex-direction: column;
+        width: 70%;
+    }
+    @include phones{
+        flex-direction: column;
+        width: 95%;
+    }
 }
 
 .form__left,
@@ -43,24 +63,38 @@ input.checkball {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: torem(20px);
+
+    @include tablets{
+        height:50%;
+        width:100%;
+    }
 }
 
 .form__row {
-    margin-bottom: 15px;
+    margin-bottom: torem(15px);
     display: flex;
     justify-content: space-between;
 }
 
 .form__block {
-    padding-right: 25px;
-    margin-right: 25px;
+    padding-right: torem(25px);
+    margin-right: torem(25px);
     flex: 1;
+    @include phones{
+        margin-right:0;
+        padding-right: torem(10px);
+    }
 }
 
 .form__block:last-child {
     margin-right: 0;
-    padding-right: 0px;
+    padding-right: torem(0px);
+
+   
+}
+
+.floor{ @include phones{display:none;}
 }
 
 .form__input {
@@ -71,9 +105,9 @@ input.checkball {
     width: 100%;
     background: #fff;
     border: none;
-    font-size: 14px;
-    border-radius: 5px;
-    padding: 10px;
+    font-size: torem(14px);
+    border-radius: torem(5px);
+    padding: torem(10px);
 }
 
 .form-field::placeholder {
@@ -83,35 +117,40 @@ input.checkball {
 .form__textarea {
     width: 100%;
     resize: none;
-    min-height: 125px;
+    min-height: torem(125px);
+    @include phones{
+        min-height: torem(110px);    
+    }
 }
 
 .form__block-title {
-    height: 14px;
+    height: torem(14px);
     color: #ffffff;
     font-weight: 300;
-    padding-bottom: 30px;
+    padding-bottom: torem(30px);
 }
 
 .form-field {
     outline: none;
-    border: 2px solid transparent;
+    border: torem(2px) solid transparent;
 }
 
 textarea:focus {
     outline: 0;
-    border: 2px solid #f9b43b;
+    border: torem(2px) solid #f9b43b;
 }
 
 input:focus {
     outline: 0;
-    border: 2px solid #f9b43b;
+    border: torem(2px) solid #f9b43b;
 }
 
+
+
 .form__send {
-    width: 139px;
-    height: 45px;
-    border-radius: 3px;
+    width: torem(97px);
+    height: torem(35px);
+    border-radius: torem(3px);
     background-color: #e45028;
     border: none;
     text-align: top;
@@ -121,43 +160,23 @@ input:focus {
     font-family: "Ubuntu";
     font-weight: 500;
     color: #ffffff;
-    font-size: 14px;
+    font-size: torem(14px);
     ;
 
-    padding: 0px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.form__send {
-    width: 97px;
-    height: 35px;
-    border-radius: 3px;
-    background-color: #e45028;
-    border: none;
-    text-align: top;
-
-    text-transform: uppercase;
-    color: #ffffff;
-    font-family: "Ubuntu";
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 14px;
-    ;
-
-    padding: 0px;
+    padding: torem(0px);
     cursor: pointer;
     text-align: center;
 }
 
 .padtop {
-    padding-top: 10px;
+    padding-top: torem(10px);
+    @include phones{justify-content: center;}
 }
 
 .form__clear {
-    width: 97px;
-    height: 35px;
-    border-radius: 3px;
+    width: torem(97px);
+    height: torem(35px);
+    border-radius: torem(3px);
     background-color: transparent;
     border: none;
     text-align: top;
@@ -167,29 +186,30 @@ input:focus {
     font-family: "Ubuntu";
     font-weight: 300;
     color: #ffffff;
-    font-size: 14px;
+    font-size: torem(14px);
     ;
 
-    padding: 0px;
+    padding: torem(0px);
     cursor: pointer;
     text-align: center;
 }
 
 
 .no_space {
-    margin-top: 20px;
+    margin-top: torem(20px);
     justify-content: unset;
+    @include phones{justify-content: center;margin-top: 0;}
 }
 
 .circle__orange {
     position: relative;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: torem(15px);
+    height: torem(15px);
     border-radius: 50%;
     background-image: linear-gradient(0deg, #ededed 0%, #ffffff 100%);
-    border: 1px solid #c9c9c9;
-    margin-left: 5px;
+    border: torem(1px) solid #c9c9c9;
+    margin-left: torem(5px);
     cursor: pointer;
 
     &::after {
@@ -198,13 +218,13 @@ input:focus {
         top: 50%;
         left: 10%;
         transform: translate(-50%, -50%);
-        width: 7px;
-        height: 7px;
+        width: torem(7px);
+        height: torem(7px);
         border-radius: 50%;
         display: none;
         background-color: #e35028;
         opacity: 0;
-        margin-left: 5px;
+        margin-left: torem(5px);
     }
 }
 
@@ -216,7 +236,7 @@ input:focus {
 .text__part {
     color: #ffffff;
     font-family: 'Ubuntu';
-    font-size: 14px;
+    font-size: torem(14px);
     font-weight: 300;
 }
 
@@ -225,11 +245,11 @@ input:focus {
     position: relative;
     top: 0;
     left: 0;
-    height: 15px;
-    width: 15px;
+    height: torem(15px);
+    width: torem(15px);
     background-color: #eee;
-    margin-left: 6px;
-    margin-right: 10px;
+    margin-left: torem(6px);
+    margin-right: torem(10px);
 
     &::after {
         content: "";
@@ -237,10 +257,10 @@ input:focus {
         display: none;
         left: 20%;
 
-        width: 5px;
-        height: 10px;
+        width: torem(5px);
+        height: torem(10px);
         border: solid #e45028;
-        border-width: 0 3px 3px 0;
+        border-width: 0 torem(3px) torem(3px) 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -251,6 +271,12 @@ input.checkbox:checked~.chk__mark::after {
     display: block;
 }
 
+.phones{@include phones{justify-content: center;align-content: center;}}
+
+//.form__cont{display: flex;
+//    align-items: center;
+ //   flex: 1;
+//@include tablets{flex-direction:column;}}
 
 
-//.checkmark:checked~.circle__pink{border: 1px solid #ec1e79;}
+//.checkmark:checked~.circle__pink{border: torem(1px) solid #ec1e79;}

@@ -4,6 +4,14 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+//breakpoint
+
+$tablets: 768px;
+$phones: 480px;
+
+//convertation
+@import "./other/convert.scss";
+
 //normalize
 @import "./other/normalize.scss";
 
@@ -24,4 +32,8 @@ $red: #e35028;
 @import "./parts/team.scss";
 @import "./parts/burger_menu.scss";
 @import "./parts/delivery.scss";
-//@import "./other/accordeon_team.scss";
+@import "./parts/contacts.scss";
+@import "./parts/footer.scss";
+@import "./other/svg_style.scss";
+
+@import "./parts/overlay_menu.scss";

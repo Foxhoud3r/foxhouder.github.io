@@ -12,7 +12,7 @@ width:100%;}
 
 .bgmenu__header{color: #ffffff;
     font-family: 'Gagalin-Regular';
-    font-size: 72px;
+    font-size: torem(72px);
     font-weight: 400;
 margin-top:3%;
 margin-left: 4%;}
@@ -35,7 +35,7 @@ margin-left: 4%;}
 .bgmenu__decor {
     display: flex;
     height: 100%;
-    width: 80px;
+    width: torem(80px);
     cursor: pointer;
     flex-direction: column;
 
@@ -48,7 +48,7 @@ margin-left: 4%;}
         transform: rotate(180deg);
         color: #ffffff;
         font-family: 'Gagalin-Regular';
-        font-size: 40px;
+        font-size: torem(40px);
         font-weight: 400;
         margin-bottom: 65%;
         margin-right:15%;
@@ -77,17 +77,17 @@ margin-left: 4%;}
 .bgmenu__desc {
     display: flex;
     height: 100%;
-    width: 0px;
+    width: torem(0px);
     background-color: #2f3234;
     opacity: 0.9;
     overflow: hidden;
     border: 0;
 
     & p {
-        padding-top: 60px;
-        padding-left: 25px;
-        padding-right: 25px;
-        font-size: 14px;
+        padding-top: torem(60px);
+        padding-left: torem(25px);
+        padding-right: torem(25px);
+        font-size: torem(14px);
 
         color: #ffffff;
         font-family: "Ubuntu";
@@ -96,6 +96,13 @@ margin-left: 4%;}
 }
 
 .active_bg {
-    width: 540px;
+    width: torem(540px);
     overflow: hidden;
+    @include tablets{
+        width:torem(530px);
+    }
+
+    @include phones{
+        width:torem(240px);
+    }
 }
