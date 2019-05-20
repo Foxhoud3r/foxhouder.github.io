@@ -1357,7 +1357,7 @@ input.checkbox:checked ~ .chk__mark::after {
     align-content: center; } }
 
 .contacts {
-  background: url("/images/contacts/map_full.png") center center/cover no-repeat;
+  background: url("../images/contacts/map_full.png") center center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: space-around; }
@@ -1434,7 +1434,7 @@ input.checkbox:checked ~ .chk__mark::after {
 .footer__container {
   display: flex;
   width: 100%;
-  background: url("/images/contacts/footer_bg.png") center center/cover no-repeat;
+  background: url("../images/contacts/footer_bg.png") center center/cover no-repeat;
   position: absolute;
   bottom: 0rem;
   justify-content: space-around; }

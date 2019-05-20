@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'tablets'.
-        on line 34 of C:\Users\mrfox\Documents\burger\style\parts\delivery.scss, in `tablets'
-        from line 34 of C:\Users\mrfox\Documents\burger\style\parts\delivery.scss
+        on line 9 of C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss, in `tablets'
+        from line 9 of C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss
 
-29:     color: #f9b43b;
-30:     font-size: torem(72px);
-31:     font-weight: 400;
-32:     text-align: center;
-33:     margin-bottom:torem(42px);
-34:     @include tablets{
-35:         margin-bottom: torem(20px);    
-36:     }
-37:     @include phones{font-size: torem(50px);
-38:         margin-bottom:torem(20px);
-39:     max-width: 50%;}
+4: 	height: torem(22px);
+5: 	align-items: center;
+6: 	margin-left: torem(30px);
+7:     display: none;
+8:     
+9:     @include tablets{
+10:         display:flex;
+11:     }
+12: 
+13: 	
+14: }
 
 Backtrace:
-C:\Users\mrfox\Documents\burger\style\parts\delivery.scss:34:in `tablets'
-C:\Users\mrfox\Documents\burger\style\parts\delivery.scss:34
+C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss:9:in `tablets'
+C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss:9
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 34 of C:\Users\mrfox\Documents\burger\style\parts\delivery.scss, in `tablets'\A         from line 34 of C:\Users\mrfox\Documents\burger\style\parts\delivery.scss\A \A 29:     color: #f9b43b;\A 30:     font-size: torem(72px);\A 31:     font-weight: 400;\A 32:     text-align: center;\A 33:     margin-bottom:torem(42px);\A 34:     @include tablets{\A 35:         margin-bottom: torem(20px);    \A 36:     }\A 37:     @include phones{font-size: torem(50px);\A 38:         margin-bottom:torem(20px);\A 39:     max-width: 50%;}"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 9 of C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss, in `tablets'\A         from line 9 of C:\Users\mrfox\Documents\burger\style\parts\overlay_menu.scss\A \A 4: 	height: torem(22px);\A 5: 	align-items: center;\A 6: 	margin-left: torem(30px);\A 7:     display: none;\A 8:     \A 9:     @include tablets{\A 10:         display:flex;\A 11:     }\A 12: \A 13: 	\A 14: }"; }
