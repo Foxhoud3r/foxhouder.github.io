@@ -3,13 +3,22 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+html{
+    @include tablets {
+        font-size: rem(15px);
+      }
+      @include phones {
+        font-size: rem(13px);
+      }
+}
+
 html,
 body {
     height: 100%;
 }
 
 body {
-    font-size: 16px;
+    font-size: torem(16px);
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,23 +31,25 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    min-width: 960px;
+   
     min-height: 100%;
     overflow: hidden;
 }
 
 .section {
     height: 100vh;
-    min-height: 650px;
+    min-height: torem(650px);
     position:relative;
+    
 }
 
 .container {
-    width: 940px;
+    max-width: torem(940px);
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    
     justify-content: center;
 }
 

@@ -1,1 +1,1 @@
-.reviews__list{display:flex;flex-wrap:wrap;height:100%}.reviews__item{width:25%;height:50%}
+body:before{white-space:pre;font-family:monospace;content:"Error: Undefined mixin 'tablets'.\A         on line 11 of C:\Users\mrfox\Documents\burger\style\parts\review.scss, in `tablets'\A         from line 11 of C:\Users\mrfox\Documents\burger\style\parts\review.scss\A \A 6:   }\A 7:   \A 8:   .reviews__item {\A 9:     width: 25%;\A 10:     height: 50%;\A 11:     @include tablets{width: 50%;\A 12:       height: 25%;\A 13:       }\A 14:   }"}

@@ -12,6 +12,8 @@
     text-align: center;
 }
 
-.header__logo{padding-top: 12px;}
+.header__logo{padding-top: torem(12px);}
 
-.header__order{margin-left:15px;}
+.header__order{margin-left:torem(15px);}
+
+.header__links{display:flex; align-items: baseline;}

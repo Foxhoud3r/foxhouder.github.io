@@ -1,31 +1,62 @@
-.btn{
-    width:100px;
-    height:35px;
-    padding: 9px 13px;
-    border-radius: 5px;
+.btn {
+    width: torem(100px);
+    height: torem(35px);
+    padding: torem(9px) torem(13px);
+    border-radius: torem(5px);
     background-color: #e45028;
-    
+
     font-family: 'Ubuntu';
     font-weight: 500;
-    font-size: 13px;
+    font-size: torem(13px);
     text-transform: uppercase;
-    margin-left:30px;
+    margin-left: torem(30px);
     display: inline-block;
-    &:hover{background-color: #c1401e;}
+
+    &:hover {
+        background-color: #c1401e;
+    }
 }
 
-.rewiev__btn{
-    width:110px;
-    height:35px;
-    padding: 9px 13px;
-    border-radius: 5px;
+.rewiev__btn {
+    width: torem(110px);
+    height: torem(35px);
+    padding: torem(9px) torem(13px);
+    border-radius: torem(5px);
     background-color: #2f3234;
     font-family: 'Ubuntu';
     font-weight: 500;
-    font-size: 13px;
+    font-size: torem(13px);
     text-transform: uppercase;
-    
+
     display: inline-block;
 
-    &:hover{background-color: #1f2122;}
+    &:hover {
+        background-color: #1f2122;
+    }
+
+    @include phones{display: none;}
+
+}
+
+.rewiev__btn-mobile {
+    width: torem(130px);
+    height: torem(35px);
+    padding: torem(9px) torem(13px);
+    border-radius: torem(5px);
+    background-color: #2f3234;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: torem(13px);
+    text-transform: uppercase;
+
+    display: none;
+
+    &:hover {
+        background-color: #1f2122;
+    }
+
+    @include phones{display: inline-block;
+        margin-top: torem(20px);
+    }
+
 }

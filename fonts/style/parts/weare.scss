@@ -1,5 +1,6 @@
 .weare {
     background: url('../images/weare/best_bg.png') center center / cover no-repeat;
+    display: flex;
 }
 
 .weare__container {
@@ -8,44 +9,68 @@
 
 .weare__list {
     display: flex;
+    @include phones{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 }
 
 .weare__item {
     flex: 1;
-    margin-right: 10px;
+    margin-right: torem(10px);
 
     &:last-child {
         margin-right: 0;
     }
+
+    @include phones{
+        display: flex;
+        margin-right: 0;
+        margin-bottom: torem(20px);
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+    }
 }
 
 .weare__title {
-    font-size: 72px;
+    font-size: torem(72px);
     font-family: 'Gagalin-Regular';
-    margin-bottom: 55px;
+    margin-bottom: torem(55px);
     line-height: 1;
     color: black;
     text-align: center;
-    margin-top: 0px;
+    margin-top: torem(0px);
 }
 
 .weare__h {
     color: #2f3234;
     font-family: 'Lifehack-Medium';
-    font-size: 24px;
+    font-size: torem(24px);
     font-weight: 500;
-    
+    margin-bottom:torem(30px);
+    @include phones{margin-bottom:torem(20px);
+    }
 }
 
 .weare__icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: torem(30px);
+    @include phones{margin-bottom: 0;
+    margin-right: torem(30px);
+width:30%;}
 }
 
 .weare__text {
-    font-size: 14px;
+    font-size: torem(14px);
     color: #2f3234;
     text-align: center;
     font-weight: 300;
+    @include phones{text-align: left;
+    width:110%;}
 }

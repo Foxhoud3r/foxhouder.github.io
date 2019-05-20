@@ -1,20 +1,47 @@
-.beads{position:absolute; display:flex;top:12%;left:102%;display: flex;flex-direction: column;}
-
-.beads__conteiner{display: flex;flex-direction: column;}
-
-.beads_itm{width: 16px;
-    height: 16px;
-    border-radius: 50%;margin-bottom: 16px; display: flex; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid transparent;}
-
-.beads__ref{ 
-display:flex;
-justify-content: center;align-items: center;
-    &::after{width: 6px;
-        height: 6px;
-        background-color: #ffffff;
-        border-radius: 50%;
-    content:''; }
+.beads {
+    position: absolute;
+    top: 12%;
+    left: 105%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    z-index: 100;
+    @include tablets{
+        display:none;
+    }
 }
 
-.active{  
-    border: 1px solid #ffffff;}  
+.beads__conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.beads_itm {
+    width: torem(16px);
+    height: torem(16px);
+    border-radius: 50%;
+    margin-bottom: torem(16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: torem(1px) solid transparent;
+}
+
+.beads__ref {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        width: torem(6px);
+        height: torem(6px);
+        background-color: #ffffff;
+        border-radius: 50%;
+        content: '';
+    }
+}
+
+.active {
+    border: torem(1px) solid #ffffff;
+}

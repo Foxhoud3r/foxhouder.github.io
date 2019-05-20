@@ -1,0 +1,89 @@
+.contacts {
+    background: url('../images/contacts/map_full.png') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include phones{
+        flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    }
+}
+
+.contacts__social,
+.contact__adress {
+    display: flex;
+    width: 50%;
+    @include phones{width: 100%;}
+
+}
+
+.contact__adress {
+    justify-content: flex-start;
+    flex-direction: column;
+    @include phones{
+        justify-content: center;
+    text-align: center;
+    
+    }
+}
+
+.contacts__social {
+    justify-content: flex-end;
+    @include phones{
+        justify-content: center;
+        align-content: center;
+        align-items: center;    
+    }
+}
+
+.contact__text {
+    padding-top: torem(10px);
+    padding-bottom: torem(10px);
+}
+
+.social-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    &:last-child {
+        padding-right: torem(0px);
+    }
+}
+
+
+.social__itm {
+    padding-bottom: torem(25px);
+    padding-top: torem(25px);
+    padding-right: torem(20px);
+
+    
+
+    @include phones{
+        padding-bottom: torem(10px);
+        padding-top: torem(10px);
+        padding-right: torem(12px);
+       
+    }
+}
+
+.phone {
+    color: #e45028;
+    font-family: 'Ubuntu';
+    font-size: torem(14px);
+    font-weight: bold;
+}
+
+.adress {
+    color: #ffffff;
+    font-size: torem(14px);
+    font-family: 'Ubuntu';
+    font-weight: 300;
+}

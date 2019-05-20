@@ -8,13 +8,18 @@
     <title>Main</title>
 </head>
     <body>
+           
         <div class="wrapper">
             <section class="section intro">
                 <div class="container intro_container">
+                    
+
                     <header class="header">
                 
-                    <div class="header__logo"> <img src="./images/intro/header_logo.png" alt="logo__img"> </div>
-                    
+                    <!--<div class="header__logo"> <img src="./images/intro/header_logo.png" alt="logo__img"> </div>-->
+                          <svg class="icon__logo header__logo">
+                            <use xlink:href="./images/svg_sprite/sprite.svg#logo"></use>
+                          </svg>
                         <div class="header__menu">
                             <nav class="menu">
                                 <ul class="menu__list">
@@ -27,39 +32,54 @@
                                  <li class="menu__item"><a href="#" class="menu__ref"> КОНТАКТЫ </a></li>
                                  </ul>
                             </nav> 
-                            <a href="#" class="btn header__order"> Заказать</a>
+                           
+                            <div class="header__links">
+                                    <a href="#" class="btn header__order"> Заказать</a>
+                                <a class="overlay__menu-links" href="">
+                                    <div class="overlay__bars"></div>
+                                </a>
+                            </div>
+
                         </div>
                     </header>
-
-                    <div class="intro__content">
-                        <div class="intro__content-picture">
-                            <img src="./images/intro/burger_stemy.png" alt="steamy-boy">
+                    <div class="beads">
+                            <ul class="beads__conteiner">
+                                <li class="beads_itm active"><a href="#" class="beads__ref "></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                                <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
+                            </ul>
                         </div>
-                        <div class="intro__content-text">
-                            <h1 class="content__title"> Мы делаем</h1>
-                            <div class="content__text">
-                                натуральные бургеры
+                    <div class="promo__container">
+                        <div class="intro__content">
+                            <div class="steamy__boy">
+                                <img src="./images/intro/burger_stemy.png" alt="steamy-boy" class="intro__content-picture">
+                            </div>
+                            <div class="intro__content-text">
+                                <div class="content__title"> Мы делаем</div>
+                                <div class="content__text">
+                                  натуральные бургеры
+                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="beads">
-                        <ul class="beads__conteiner">
-                            <li class="beads_itm active"><a href="#" class="beads__ref "></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                            <li class="beads_itm"><a href="#" class="beads__ref"></a></li>
-                        </ul>
+                    
+                    
+                
+                
+                    
+                </div>
+                <div class="arrow__down"> 
+                        <!--<a href="#" class="arrow down"></a>    -->                
+                        <svg class="icon__ardown">
+                            <use xlink:href="./images/svg_sprite/sprite.svg#arrow-scroll"></use>
+                        </svg>
                     </div>
-                </div>
-               
-                <div>
-                    <a href="#" class="arrow down"></a>                    
-                </div>
             </section>  
             
             <section class="section weare">
@@ -69,32 +89,46 @@
                         <ul class="weare__list">
                             <li class="weare__item">
                                 <div class="weare__icon">
-                                    <img src="./images/weare/best_meat.png" alt="meat-icon" class="icon__image">
+                                        <svg class="icon__meat">
+                                            <use xlink:href="./images/svg_sprite/sprite.svg#meat"></use>
+                                        </svg>
+                                    <!-- <img src="./images/weare/best_meat.png" alt="meat-icon" class="icon__image"> -->
                                 </div>
                                 <div class="weare__text">
-                                    <h3 class="weare__h"> 100% свежее мясо</h3>
+                                    <div class="weare__h"> 100% свежее мясо</div>
                                     <div class="weare__dscrpt">
                                         <p> Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
                                     </div>
                                 </div>
                             </li>
                             <li class="weare__item">
-                                    <div class="weare__icon">
-                                        <img src="./images/weare/best_handmade.png" alt="hand-icon" class="icon__image">
+                                    <div class="weare__icon">                                  
+                                        <svg class="icon__hand">
+                                            <use xlink:href="./images/svg_sprite/sprite.svg#hand"></use>
+                                        </svg>
                                     </div>
+
+                                    <!--<div class="weare__icon">
+                                        <img src="./images/weare/best_handmade.png" alt="hand-icon" class="icon__image">
+                                    </div>-->
                                     <div class="weare__text">
-                                        <h3 class="weare__h"> Ручная сборка</h3>
+                                        <div class="weare__h"> Ручная сборка</div>
                                         <div class="weare__dscrpt">
                                             <p> Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="weare__item">
-                                        <div class="weare__icon">
+                                        <div class="weare__icon">    
+                                            <svg class="icon__salad">
+                                                <use xlink:href="./images/svg_sprite/sprite.svg#natural"></use>
+                                            </svg>
+                                        </div>    
+                                        <!--<div class="weare__icon">
                                             <img src="./images/weare/best_natural.png" alt="grass-icon" class="icon__image">
-                                        </div>
+                                        </div>-->
                                         <div class="weare__text">
-                                            <h3 class="weare__h"> Натуральные<br/>ингредиенты</h3>
+                                            <div class="weare__h"> Натуральные ингредиенты</div>
                                             <div class="weare__dscrpt">
                                                 <p> Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
                                             </div>
@@ -105,94 +139,81 @@
                 </div>
             </section>
 
-           <section class="section team">
-                <div class="container">
-                    <div class="team__menu">
-                       
-                        <div class="accordion__team">
-                            <h2 class="team__h"> команда </h2>
-                              <div class="team__input">
-                                <input id="ac-1" name="accordion" type="radio" class="team_inp"/>
-                                   <div class="team__label">
-                                        
-                                        <label for="ac-1" class="team_prt"> <div class="arrow__team"></div> Дэниэл Редклиф</label>
-                                    </div>    
-                                    <div class="team__desc">
-                                        <div>
-                                            <img src="./images/team/daniel.jpg" alt="team__avtr" class='team__avtr'>
-                                        </div>
-                                        
-                                        <div class="team__text">
-                                                <h4 class="team__role">Маскот</h4>
-                                            <p>Почетный член команды. Обещал не доставать волшебную палочку в заведении.</p>
-                                        </div>
+            <section class="section team">
+                    <div class="team__content">
+                        <div class="team__h">команда</div>
+                        <ul class="team__list">
+                            <li class="team__item">
+                                <h3 class="team__title">Дэниэл Редклиф</h3>
+                                <div class="team__body">
+                                    <div class="team__avatar">
+                                        <img src="./images/team/daniel.jpg" class="team__avtr" alt="team member avatar">
                                     </div>
-                                </div> 
-                            
-                                    <div class="team__input">
-                                      <input id="ac-2" name="accordion" type="radio" class="team_inp" checked="checked" />
-                                      <div class="team__label">
-                                       
-                                        <label for="ac-2" class="team_prt">  <div class="arrow__team"></div> Ричард Джеймс</label>
-                                        </div>     
-                                          <div class="team__desc">
-                                              <div>
-                                                  <img src="./images/team/richard.png" alt="team__avtr" class='team__avtr'>
-                                              </div>
-                                              
-                                              <div class="team__text">
-                                                      <h4 class="team__role">Оператор</h4>
-                                                  <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
-                                              </div>
-                                          </div>
-                                        </div> 
-                           
-                                    <div class="team__input">
-                                      <input id="ac-3" name="accordion" type="radio" class="team_inp" />
-                                      <div class="team__label">
-                                        
-                                        <label for="ac-3" class="team_prt"> <div class="arrow__team"></div> Джейк Финн</label>
-                                        </div>     
-                                          <div class="team__desc">
-                                              <div>
-                                                  <img src="./images/team/jake.jpg" alt="team__avtr" class='team__avtr'>
-                                              </div>
-                                              
-                                              <div class="team__text">
-                                                      <h4 class="team__role">Повар</h4>
-                                                  <p>Мастер поджаривания котлет и блинчиков с беконом.</p>
-                                              </div>
-                                          </div>
-                                        </div> 
-                            
-                                <div class="team__input">
-                                      <input id="ac-4" name="accordion" type="radio" class="team_inp"/>
-                                      <div class="team__label">
-                                        
-                                        <label for="ac-4" class="team_prt"> <div class="arrow__team"></div> Николай Иванов</label>
-                                        </div>     
-                                          <div class="team__desc">
-                                              <div>
-                                                  <img src="./images/team/nic.jpg" alt="team__avtr" class='team__avtr'>
-                                              </div>
-                                              
-                                              <div class="team__text">
-                                                      <h4 class="team__role">Контроль качества</h4>
-                                                  <p>Всегда выслушает ваши претензии.</p>
-                                              </div>
-                                          </div>
-                                </div> 
-                            
-                        </div>
+                                    <div class="team__box">
+                                        <div class="team__job">
+                                            Маскот
+                                        </div>
+                                        <p class="team__desc">
+                                            Почетный член команды. Обещал не доставать волшебную палочку в заведении.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item team__item_active">
+                                <h3 class="team__title">Ричард Джеймс</h3>
+                                <div class="team__body">
+                                    <div class="team__avatar">
+                                        <img src="./images/team/richard.png" class="team__avtr" alt="team member avatar">
+                                    </div>
+                                    <div class="team__box">
+                                        <div class="team__job">
+                                            Оператор
+                                        </div>
+                                        <p class="team__desc">
+                                            С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <h3 class="team__title">Джейк Финн</h3>
+                                <div class="team__body">
+                                    <div class="team__avatar">
+                                        <img src="./images/team/jake.jpg" class="team__avtr" alt="team member avatar">
+                                    </div>
+                                    <div class="team__box">
+                                        <div class="team__job">
+                                            Повар
+                                        </div>
+                                        <p class="team__desc">
+                                           Мастер поджаривания котлет и блинчиков с беконом.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <h3 class="team__title">Николай Иванов</h3>
+                                <div class="team__body">
+                                    <div class="team__avatar">
+                                        <img src="./images/team/nic.jpg" alt="team__avtr" class='team__avtr'>
+                                    </div>
+                                    <div class="team__box">
+                                        <div class="team__job">
+                                           Контроль качества
+                                        </div>
+                                        <p class="team__desc">
+                                            Всегда выслушает ваши претензии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </section>
+                </section>
 
             <section class="section bgmenu"> 
               
-                        <div class="bgmenu__header">
-                                <h2>Меню</h2>
-                        </div>
+                        <div class="bgmenu__header"> Меню</div>
                       
                         <div class="bgmenu__accordion">
                             <div class="bgmenu_obj">
@@ -231,32 +252,42 @@
 
             <section class="section reviews">
                 <ul class="reviews__list">
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_1.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
+                    <li class="reviews__item">
+                        <div class="review__obj">
+
+                        <div style="background-image:url('./images/review_avatar/review_1.png')" class="review__pic"></div>
+                         <div class="review__onhower">
                                 <h3 class="review__title">Istagram model 1</h3>
                                 <div class="review__text">
                                     <p>Какая-то рандомная insta-diva. Пришла, сфотографировала бургер, собрала 300 лайков.Партнерку дадут?</p>
                                 </div>
                                 <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
+                                        <a href="#" class="rewiev__btn"> Подробнее </a>
+                                        <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
                                 </div>
+                         </div>
                         </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_2.png" alt="review__awatar" class="review__pic">
+                    <li class="reviews__item">
+                            <div class="review__obj">
+
+                                    <div style="background-image:url('./images/review_avatar/review_2.png')" class="review__pic"></div>
                         <div class="review__onhower">
                                 <h3 class="review__title">Константин Спилберг</h3>
                                 <div class="review__text">
                                     <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 </div>
                                 <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
+                                        <a href="#" class="rewiev__btn"> Подробнее </a>
+                                        <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
                                 </div>
                         </div>
+                        </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_3.png" alt="review__awatar" class="review__pic">
+                    <li class="reviews__item">
+                            <div class="review__obj">
+
+                                    <div style="background-image:url('./images/review_avatar/review_3.png')" class="review__pic"></div>
                         <div class="review__onhower">
                                 <h3 class="review__title">Istagram model 2</h3>
                                 <div class="review__text">
@@ -264,77 +295,97 @@
                                 </div>
                                 <div>
                                     <a href="#" class="rewiev__btn"> Подробнее </a>
+                                    <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
                                 </div>
                         </div>
-                    </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_4.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
-                                <h3 class="review__title">Edgy boy </h3>
-                                <div class="review__text">
-                                    <p>Edgy поц. Пришел, заказал бургер.Музыка в заведении не очень. Попросил поставить Скриптонита - меня выгнали из заведения пинками. Я - веган.</p>
-                                </div>
-                                <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
-                                </div>
                         </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_5.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
-                                <h3 class="review__title">Istagram model 3</h3>
-                                <div class="review__text">
-                                    <p>Я - Instagram model and influencer. Пришла, сфотографировала бургер, собрала 300 лайков.Партнерку дадут?</p>
-                                </div>
-                                <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
-                                </div>
-                        </div>
+                    <li class="reviews__item">
+                            <div class="review__obj">
+                                  <div style="background-image:url('./images/review_avatar/review_4.png')" class="review__pic"></div>
+                                <div class="review__onhower">
+                                    <h3 class="review__title">Edgy boy </h3>
+                                        <div class="review__text">
+                                            <p>Edgy поц. Пришел, заказал бургер.Музыка в заведении не очень. Попросил поставить Скриптонита - меня выгнали из заведения пинками. Я - веган.</p>
+                                        </div>
+                                    <div>
+                                            <a href="#" class="rewiev__btn"> Подробнее </a>
+                                            <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
+                                    </div>
+                               </div> 
+                            </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_6.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
-                                <h3 class="review__title">Istagram model 4</h3>
-                                <div class="review__text">
-                                    <p>Я - Instagram model and influencer, SJW activist. Пришла, сфотографировала бургер, собрала 300 лайков. В заведении отказались выгнать всех мужиков и проигнорировали заявленияо women-only space.</p>
-                                </div>
-                                <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
-                                </div>
-                        </div>
+                    <li class="reviews__item">
+                            <div class="review__obj">
+                                <div style="background-image:url('./images/review_avatar/review_5.png')" class="review__pic"></div>
+                                <div class="review__onhower">
+                                    <h3 class="review__title">Istagram model 3</h3>
+                                        <div class="review__text">
+                                            <p>Я - Instagram model and influencer. Пришла, сфотографировала бургер, собрала 300 лайков.Партнерку дадут?</p>
+                                        </div>
+                                        <div>
+                                                <a href="#" class="rewiev__btn"> Подробнее </a>
+                                                <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
+                                        </div>
+                                </div>  
+                            </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_7.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
-                                <h3 class="review__title">Дед в берете</h3>
-                                <div class="review__text">
-                                    <p>Дали скидку на бургер за то, что у меня отличный берет. Пнул поца, который просил поставить Скриптонита.</p>
+                    <li class="reviews__item">
+                            <div class="review__obj">
+
+                                 <div style="background-image:url('./images/review_avatar/review_6.png')" class="review__pic"></div>
+                                <div class="review__onhower">
+                                     <h3 class="review__title">Istagram model 4</h3>
+                                    <div class="review__text">
+                                         <p>Я - Instagram model and influencer, SJW activist. Пришла, сфотографировала бургер, собрала 300 лайков. В заведении отказались выгнать всех мужиков и проигнорировали заявленияо women-only space.</p>
+                                    </div>
+                                    <div>
+                                            <a href="#" class="rewiev__btn"> Подробнее </a>
+                                            <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
-                                </div>
-                        </div>
+                            </div>
                     </li>
-                    <li class="reviews__item review__obj">
-                        <img src="./images/review_avatar/review_8.png" alt="review__awatar" class="review__pic">
-                        <div class="review__onhower">
-                                <h3 class="review__title">Бородач </h3>
-                                <div class="review__text">
-                                    <p>Дед в берете шикарный.</p>
-                                </div>
-                                <div>
-                                    <a href="#" class="rewiev__btn"> Подробнее </a>
-                                </div>
+                    <li class="reviews__item">
+                            <div class="review__obj">
+
+                                <div style="background-image:url('./images/review_avatar/review_7.png')" class="review__pic"></div>
+                                 <div class="review__onhower">
+                                        <h3 class="review__title">Дед в берете</h3>
+                                    <div class="review__text">
+                                        <p>Дали скидку на бургер за то, что у меня отличный берет. Пнул поца, который просил поставить Скриптонита.</p>
+                                    </div>
+                                    <div>
+                                            <a href="#" class="rewiev__btn"> Подробнее </a>
+                                            <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
+                                     </div>
+                                 </div>
+                             </div>
+                    </li>
+                    <li class="reviews__item">
+                            <div class="review__obj">
+
+                             <div style="background-image:url('./images/review_avatar/review_8.png')" class="review__pic"></div>
+                                <div class="review__onhower">
+                                    <h3 class="review__title">Бородач </h3>
+                                    <div class="review__text">
+                                        <p>Дед в берете шикарный.</p>
+                                    </div>
+                                    <div>
+                                            <a href="#" class="rewiev__btn"> Подробнее </a>
+                                            <a href="#" class="rewiev__btn-mobile"> Читать отзыв </a>
+                                    </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </section>
 
             <section class="section delivery">
-                <div class="container delivery__container">
+              
 
                     <div class="delivery_h">
-                        <h2>Закажите доставку</h2>
+                        Закажите доставку
                     </div>
 
                     
@@ -358,19 +409,19 @@
                                         </label>
                                 </div>
                                 <div class="form__row">
-                                        <label class="form__block">
+                                        <label class="form__block house">
                                             <div class="form__block-title">Дом</div>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
-                                        <label class="form__block">
+                                        <label class="form__block korp">
                                             <div class="form__block-title">Корпус</div>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
-                                        <label class="form__block">
+                                        <label class="form__block apart">
                                             <div class="form__block-title">Квартира</div>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
-                                        <label class="form__block">
+                                        <label class="form__block floor">
                                             <div class="form__block-title">Этаж</div>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
@@ -384,7 +435,7 @@
                                             <textarea name="" class="form__textarea form-field"></textarea>
                                          </label>
                                     </div>
-                                    <div class="form__row">
+                                    <div class="form__row phones">
                                             <div class="form-submit">      
                                                     <label class="radio__input">
                                                             <INPUT TYPE="radio" class="checkball" name="mark" id="checkmark" checked="checked"> 
@@ -398,7 +449,7 @@
                                                     </label>
                                             </div>   
                                     </div>
-                                    <div class="form_row padtop">
+                                    <div class="form__row padtop">
                                             <label class="checkbox__input">
                                                     <INPUT TYPE="checkbox" class="checkbox" name="checkbox" id="checkbox" > 
                                                     <span class="chk__mark"></span>
@@ -406,7 +457,7 @@
                                             </label>
                                     </div>
                                     <div class="form__row no_space">
-                                            <button class="form__send">Заказать</button>
+                                            <button type="submit" class="form__send">Заказать</button>
                                             <button class="form__clear">Очистить</button>
                                     </div>
                             </div>
@@ -414,8 +465,60 @@
                         </form>
                     
 
-                </div>
+               
             </section>
+
+            <section class="section contacts">
+               
+            </section>
+            <footer class='footer__container'>
+                
+                <div class="container contact__info">
+                    <div class="contact__adress">
+                      <div class="contact__text">  
+                        <div class='adress'>Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                        <a href="+78123771377" class="phone"> 
+                            <svg class="icon__phone">
+                                <use xlink:href="./images/svg_sprite/sprite.svg#phone"></use>
+                            </svg>
+                            +7 (812) 377-13-77</a>
+                    </div>
+                    </div>
+                    
+                    <div class="contacts__social">
+                        <ul class="social-menu">
+                            <li>
+                                <div class="social__itm">  
+                                    <svg class="social__icon">
+                                        <use xlink:href="./images/svg_sprite/sprite.svg#vk"></use>
+                                    </svg> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="social__itm">   
+                                    <svg class="social__icon">
+                                        <use xlink:href="./images/svg_sprite/sprite.svg#fb"></use>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="social__itm">   
+                                    <svg class="social__icon">
+                                        <use xlink:href="./images/svg_sprite/sprite.svg#inst"></use>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="social__itm">   
+                                    <svg class="social__icon">
+                                        <use xlink:href="./images/svg_sprite/sprite.svg#twitter"></use>
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
             
         </div>  
         <script
