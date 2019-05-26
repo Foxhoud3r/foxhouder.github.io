@@ -2,3 +2,13 @@
   position:absolute;bottom:torem(20px);left:50%; display:flex;
 }
 
+.arrow__left{position:absolute;left:torem(-40px);top:60%;display:flex;transform: rotate(90deg);
+  @include tablets{left:torem(20px);top:55%}
+  @include phones{top:50%}
+}
+
+.arrow__right{position:absolute;right:torem(-40px);top:60%;display:flex;transform: rotate(-90deg);
+@include tablets{right:torem(20px);top:55%}
+@include phones{top:50%}
+
+}

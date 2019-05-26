@@ -8,8 +8,31 @@
     <title>Main</title>
 </head>
     <body>
-           
+        
+       
         <div class="wrapper">
+             <!--навигация для мобильного меню-->
+             <div class="overlay">
+                 <div class="overlay__logo">
+                    <svg class="icon__logo overlay__logo">
+                            <use xlink:href="./images/svg_sprite/sprite.svg#logo"></use>
+                          </svg>
+                </div>   
+                    <nav class="overlay__menu">
+                        <ul class="overlay__list">
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> О НАС </a></li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> БУРГЕРЫ </a> </li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> КОМАНДА </a></li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> МЕНЮ </a></li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> ОТЗЫВЫ </a></li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> КАК МЫ РАБОТАЕМ </a></li>
+                         <li class="overlay__item"><a href="#" class="overlay__ref"> КОНТАКТЫ </a></li>
+                         </ul>
+                    </nav> 
+                    <a href="#" class="close"></a>
+                </div>
+               
+            <!--навигация для мобильного меню-->
             <section class="section intro">
                 <div class="container intro_container">
                     
@@ -35,7 +58,7 @@
                            
                             <div class="header__links">
                                     <a href="#" class="btn header__order"> Заказать</a>
-                                <a class="overlay__menu-links" href="">
+                                <a class="overlay__menu-links" href="#">
                                     <div class="overlay__bars"></div>
                                 </a>
                             </div>
@@ -138,6 +161,74 @@
                     
                 </div>
             </section>
+
+            <section class="section slider">
+                <div class="container slider__container">
+                  
+                    
+                    <div class="slider__content">
+                        <a class="arrow__left">                 
+                            <svg class="icon__ardown">
+                                <use xlink:href="./images/svg_sprite/sprite.svg#arrow-scroll"></use>
+                           </svg>
+                       </a>
+                        <div class="sldcnt__left">
+
+                            <a href="#" class="slider__menu">
+                                    <svg class="icon__burger">
+                                            <use xlink:href="./images/svg_sprite/sprite.svg#burger"></use>
+                                       </svg>
+                                       состав
+                            </a>
+
+                            <div class="burger__boy">
+                                 <img src="./images/slider/burgers_burger_ink.png" alt="steamy-boy" class="sldr__content-picture">
+                            </div>
+
+                            <a href="" class="slider__kkal">
+                                    <svg class="icon__kkal">
+                                            <use xlink:href="./images/svg_sprite/sprite.svg#kkal"> </use>
+                                            <text x="10" y="52" class="kkal__text-icon">1200</text>
+                                       </svg>
+                                       <div class="kkal__text">ККАЛ</div>
+                            </a>
+
+                        </div>
+
+                        <div class="sldcnt__right">
+                            <div class="sldr__header">
+                                    Dark BEEF
+                                    Burger
+                            </div>
+                            <div class="sldr__dsckr">
+                                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                            </div>
+                            <div class="sldr__order">
+
+                                <div class="sldr__price">
+                                    500 
+                                    <div class="sldr__val">рублей</div>
+                                </div>
+
+                                <div class=" btn sldr__ordrbtn">
+                                    заказать
+                                </div>
+
+                            </div>
+                        </div>
+                        <a class="arrow__right">                 
+                            <svg class="icon__ardown">
+                                <use xlink:href="./images/svg_sprite/sprite.svg#arrow-scroll"></use>
+                            </svg>
+                        </a>        
+
+                    </div>
+
+
+                    
+                </div>
+            </section>
+
 
             <section class="section team">
                     <div class="team__content">
@@ -394,35 +485,35 @@
                             <div class="form__left">
                                 <div class="form__row">
                                         <label class="form__block">
-                                            <div class="form__block-title">Имя</div>
+                                            <span class="form__block-title">Имя</span>
                                         <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                         <label class="form__block">
-                                            <div class="form__block-title">Номер телефона</div>
+                                            <span class="form__block-title">Номер телефона</span>
                                             <input type="text" placeholder="89212264923" class="form__input form-field">
                                         </label>
                                 </div>
                                 <div class="form__row">
                                         <label class="form__block">
-                                            <div class="form__block-title">Улица</div>
+                                            <span class="form__block-title">Улица</span>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                 </div>
                                 <div class="form__row">
                                         <label class="form__block house">
-                                            <div class="form__block-title">Дом</div>
+                                            <span class="form__block-title">Дом</span>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                         <label class="form__block korp">
-                                            <div class="form__block-title">Корпус</div>
+                                            <span class="form__block-title">Корпус</span>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                         <label class="form__block apart">
-                                            <div class="form__block-title">Квартира</div>
+                                            <span class="form__block-title">Квартира</span>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                         <label class="form__block floor">
-                                            <div class="form__block-title">Этаж</div>
+                                            <span class="form__block-title">Этаж</span>
                                             <input type="text" placeholder="" class="form__input form-field">
                                         </label>
                                 </div>
@@ -431,23 +522,23 @@
                             <div class="form__right">
                                     <div class="form__row">
                                          <label class="form__block">
-                                            <div class="form__block-title">Комментарий</div>
-                                            <textarea name="" class="form__textarea form-field"></textarea>
+                                            <span class="form__block-title">Комментарий</span>
+                                            <textarea name="Comment" class="form__textarea form-field"></textarea>
                                          </label>
                                     </div>
                                     <div class="form__row phones">
-                                            <div class="form-submit">      
+                                            <span class="form-submit">      
                                                     <label class="radio__input">
-                                                            <INPUT TYPE="radio" class="checkball" name="mark" id="checkmark" checked="checked"> 
+                                                            <INPUT TYPE="radio" class="checkball" name="mark" id="checkmark-1" checked="checked"> 
                                                             <span class="circle__orange"></span>
                                                             <span class="text__part"> Потребуется сдача </span>
                                                     </label>
                                                     <label class="radio__input">
-                                                            <INPUT TYPE="radio" class="checkball" name="mark" id="checkmark" >
+                                                            <INPUT TYPE="radio" class="checkball" name="mark" id="checkmark-2" >
                                                             <span class="circle__orange"></span>
                                                             <span class="text__part">Оплата по карте</span> 
                                                     </label>
-                                            </div>   
+                                            </span>   
                                     </div>
                                     <div class="form__row padtop">
                                             <label class="checkbox__input">

@@ -23,8 +23,8 @@ $(document).ready( function(){
             
             
 
-    })
-})
+    });
+});
 
 $(document).ready(function () {
 
@@ -45,3 +45,41 @@ $(document).ready(function () {
   
     });
   });
+
+
+  $(document).ready(function(){
+    var ovrl = $('.overlay__menu-links');
+    
+    ovrl.click(function(e){
+      e.preventDefault();
+      
+      var ovlmenu=$('.overlay');
+      var hdrlogo=$('.header__logo');
+      
+     
+      hdrlogo.addClass('vsbl_not');
+      ovlmenu.addClass('overlay__active');
+      
+    });
+
+  });
+
+  $(document).ready(function(){
+    var ovrl = $('.close');
+    
+    ovrl.click(function(e){
+      e.preventDefault();
+      
+      var ovlmenu=$('.overlay');
+      var hdrlogo=$('.header__logo');
+      
+      
+      
+      ovlmenu.removeClass('overlay__active');
+      
+      hdrlogo.removeClass('vsbl_not');
+    });
+
+  });
+
+  
