@@ -1,0 +1,37 @@
+.popup{background-color:rgba(0,0,0,0.4);
+position: fixed;
+    width:100%;
+   height:100%;
+   z-index: 1;
+   left: 0;
+   top: 0;
+    overflow: hidden;
+    
+    display: none;
+	flex-direction: column;
+    justify-content: center;}
+    
+    .popup__box{
+        width: torem(196px);
+        height: torem(106px);
+        border-radius: torem(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #ffff;
+        margin: auto;
+        z-index: 3;
+        opacity: 1;
+    }
+
+    .popup__btn{margin-left:0;
+        width: torem(97px);
+        height: torem(35px);
+        border-radius: torem(5px);}
+
+        .popup__message{margin-bottom: torem(5px)}
+
+        .body__over{overflow:hidden;}

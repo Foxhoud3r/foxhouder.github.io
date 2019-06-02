@@ -77,7 +77,11 @@
     margin-top: 15%;
     display: flex;
     width: 100%;
-    @include tablets{width: 90%;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    transform: translateX(0%);
+    transition: 1.5s;
+    @include tablets{width: 100%;
         margin: auto;
         align-content: center;
         align-items: center;
@@ -201,3 +205,7 @@
     }
     
 }
+
+.tester_slider{display: block}
+.slider__inline{display: flex;
+    overflow: hidden;}

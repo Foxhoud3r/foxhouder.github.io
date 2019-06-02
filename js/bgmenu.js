@@ -82,4 +82,200 @@ $(document).ready(function () {
 
   });
 
+  $(document).ready(function(){
+    var ovrl = $('.arrow__right');
+    
+    ovrl.click(function(e){
+      e.preventDefault();
+      
+      var sldrelem=$('.slider__content');
+      var cntelem=$('.slider__content').length;
+      var tranval =parseInt($('.slider__content').css('transform').split(',')[4]);
+      var elemwth =parseInt(sldrelem.css('width'));  
+
+     console.log(cntelem);
+     console.log(tranval);
+     console.log(elemwth);
+
+     if (tranval==0){
+
+      tranval=elemwth*(-1);
+      console.log(tranval);
+      $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+     } else
+              if((tranval*(-1))<(elemwth*(cntelem-1))) {  
+                console.log((tranval*(-1)));
+                console.log((elemwth*(cntelem-1))); 
+                  tranval=tranval-elemwth;
+                  $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+              }else{
+                tranval=0;
+                $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+              };
+
+      
+     
+     
+     //var elmnbr=(parseInt(sldrelem.css('width'))/parseInt($('.slider__content').css('transform').split(',')[4]));
+     //console.log(elmnbr); //так нашли позицию елемента 
+      
+    });
+
+  });
+
+  $(document).ready(function(){
+    var ovrl = $('.arrow__left');
+    
+    ovrl.click(function(e){
+      e.preventDefault();
+      
+      var sldrelem=$('.slider__content');
+      var cntelem=$('.slider__content').length;
+      var tranval =parseInt($('.slider__content').css('transform').split(',')[4]);
+      var elemwth =parseInt(sldrelem.css('width'));  
+
+     console.log(cntelem);
+     console.log(tranval);
+     console.log(elemwth);
+
+     if (tranval==0){
+
+      tranval=elemwth*(-1*(cntelem-1));
+      console.log(tranval);
+      $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+     } else if((tranval*(-1))>0) {   
+                  tranval=tranval+elemwth;
+                  $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+              }else{
+                tranval=elemwth*(-1*(cntelem-1));
+                $('.slider__content').css({'transform' : 'translateX(' + tranval +'px)'});
+              };
+            
+            });
+  });
+
+
+  //обработка формы
+  $(document).ready(function(){
+    var frm = $('.form');
+      frm.submit(function(e){
+       e.preventDefault();
+        console.log(frm);
+        var form = document.forms.order__form; 
+
+        if(form.elements.name.value==''){
+          alert('Заполните имя.');
+          return;
+        };
+        if(form.elements.comment.phone==''){
+          alert('Заполните номер телефона.');
+          return;
+        };
+        if(form.elements.comment.value==''){
+          alert('Заполните комментарий.');
+          return;
+        };
+
+      var ajaxForm = function (form){
+        
+        let sndform = new FormData();
+        console.log(form.elements.name.value);
+        console.log(form.elements.phone.value);
+        console.log(form.elements.comment.value);
+       
+
+        sndform.append("name",form.elements.name.value);
+        sndform.append("phone",form.elements.phone.value);
+        sndform.append("comment",form.elements.comment.value);
+        sndform.append("to","test@mail.ru");
+          
+          if (form.elements.comment.value==='error'){
+            console.log('error true');
+            var url='https://webdev-api.loftschool.com/sendmail/fail';
+          } else {
+            console.log('we are good chief');
+            var url='https://webdev-api.loftschool.com/sendmail';
+          };
+
+          console.log(url);
+            
+          let xhr = new XMLHttpRequest();
+          xhr.responseType='json';
+          xhr.open("POST",url);
+          xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
+          xhr.send(sndform);
+          
+          return xhr;
+      };
+
+      var answ = ajaxForm(form);
+      answ.addEventListener('load',()=>{
+        console.log(answ.response);
+      
+        if (answ.response.status===0){
+          console.log(answ.response.status);
+          document.getElementById("popup__message").textContent='Что-то сломалось!';
+          document.getElementById('popup').style.display='flex';
+          $('body').addClass('body__over');
+        }
+        else{console.log(answ.response.status);
+          document.getElementById("popup__message").textContent='Сообщение отправлено.';
+          document.getElementById('popup').style.display='flex';
+          $('body').addClass('body__over');
+        };
+      });
   
+      });
+  });
+
+  $(document).ready(function(){
+    var popcls = $('.popup__btn');
+    
+    popcls.click(function(e){
+      e.preventDefault();
+      $('body').removeClass('body__over');
+      document.getElementById('popup').style.display='none';
+  });
+});
+
+$(document).ready(function(){
+  var popcls = $('.popup');
+  
+  popcls.click(function(e){
+    e.preventDefault();
+    $('body').removeClass('body__over');
+    document.getElementById('popup').style.display='none';
+});
+});
+
+$(document).ready(function(){
+  const phone =  $('#mobile');
+  
+  phone.on('input',function(){
+    var valfld= this.value;
+    console.log( valfld);
+    var regex=/^[0-9]+$/;
+    if(!valfld.match(regex)){
+      
+      this.value='';
+      alert('Телефон должен содержать только числа');
+    }
+   
+});
+});
+
+$(document).ready(function(){
+  const phone =  $('#name');
+  
+  phone.on('input',function(){
+    var valfld= this.value;
+    console.log( valfld);
+    var regex=/^[a-zA-zа-яA-Я]+$/;
+    if(!valfld.match(regex)){
+      
+      this.value='';
+      alert('Телефон должен содержать только буквы');
+    }
+   
+});
+});

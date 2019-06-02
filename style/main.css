@@ -854,6 +854,9 @@ footer {
   .btn:hover {
     background-color: #c1401e; }
 
+button:focus {
+  outline: 0; }
+
 .rewiev__btn {
   width: 6.875rem;
   height: 2.1875rem;
@@ -1606,6 +1609,9 @@ svg.social__icon {
     background: #fff;
     border-radius: 50%;
     margin: 1.5625rem; }
+    @media screen and (max-width: 480px) {
+      .overlay__item:after {
+        margin: 5%; } }
   .overlay__item:last-child {
     margin-right: 0; }
     .overlay__item:last-child:after {
@@ -1638,8 +1644,8 @@ svg.social__icon {
 
 @media screen and (max-width: 768px) {
   .overlay__logo {
-    width: 92px;
-    height: 69px;
+    max-width: 3.75rem;
+    max-height: 3.75rem;
     z-index: 5;
     top: 20px;
     left: 35px;
@@ -1724,10 +1730,14 @@ svg.social__icon {
 .slider__content {
   margin-top: 15%;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  transform: translateX(0%);
+  transition: 1.5s; }
   @media screen and (max-width: 768px) {
     .slider__content {
-      width: 90%;
+      width: 100%;
       margin: auto;
       align-content: center;
       align-items: center;
@@ -1833,5 +1843,52 @@ svg.social__icon {
     max-width: 90%;
     margin-right: 10%;
     align-content: center; } }
+
+.tester_slider {
+  display: block; }
+
+.slider__inline {
+  display: flex;
+  overflow: hidden; }
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: center; }
+
+.popup__box {
+  width: 12.25rem;
+  height: 6.625rem;
+  border-radius: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #ffff;
+  margin: auto;
+  z-index: 3;
+  opacity: 1; }
+
+.popup__btn {
+  margin-left: 0;
+  width: 6.0625rem;
+  height: 2.1875rem;
+  border-radius: 0.3125rem; }
+
+.popup__message {
+  margin-bottom: 0.3125rem; }
+
+.body__over {
+  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */

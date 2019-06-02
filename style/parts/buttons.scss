@@ -4,7 +4,7 @@
     padding: torem(9px) torem(13px);
     border-radius: torem(5px);
     background-color: #e45028;
-
+   
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: torem(13px);
@@ -16,7 +16,7 @@
         background-color: #c1401e;
     }
 }
-
+button:focus {outline:0;}
 .rewiev__btn {
     width: torem(110px);
     height: torem(35px);
