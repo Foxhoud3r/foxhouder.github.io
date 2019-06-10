@@ -9,11 +9,12 @@
     display: flex;
     width: 100%;
     position: relative;
-    @include tablets{
+
+    @include tablets {
         flex-direction: column;
-        width:90%;
+        width: 90%;
         margin: auto;
-        
+
     }
 }
 
@@ -24,12 +25,13 @@
     height: 100%;
     width: 50%;
     flex-direction: column;
-    @include tablets{
+
+    @include tablets {
         text-align: center;
-    height: 50%;
-    width: 100%;
-    align-content: center;
-    align-items: center;
+        height: 50%;
+        width: 100%;
+        align-content: center;
+        align-items: center;
     }
 }
 
@@ -49,13 +51,17 @@
 
     font-weight: normal;
     font-style: normal;
-    @include tablets{
+
+    @include tablets {
         position: absolute;
         left: 15%;
         top: 15%;
     }
-    @include phones{top:3%;
-        left:3%;}
+
+    @include phones {
+        top: 3%;
+        left: 3%;
+    }
 }
 
 
@@ -64,13 +70,17 @@
     width: torem(60px);
     height: torem(60px);
     opacity: 0.5;
-    @include tablets{
+
+    @include tablets {
         position: absolute;
         right: 15%;
         top: 15%;
     }
-    @include phones{top:3%;
-    right:3%;}
+
+    @include phones {
+        top: 3%;
+        right: 3%;
+    }
 }
 
 .slider__content {
@@ -81,12 +91,15 @@
     flex-basis: 100%;
     transform: translateX(0%);
     transition: 1.5s;
-    @include tablets{width: 100%;
+
+    @include tablets {
+        width: 100%;
         margin: auto;
         align-content: center;
         align-items: center;
         justify-content: center;
-    flex-direction: column}
+        flex-direction: column
+    }
 }
 
 .sldr__header {
@@ -98,18 +111,21 @@
     font-style: normal;
     font-size: torem(72px);
     font-weight: 400;
-    @include tablets{padding-left: 55px;
-      
-        
+
+    @include tablets {
+        padding-left: 55px;
+
+
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 80%;}
+        width: 80%;
+    }
 
-        @include phones{
-            font-size: torem(50px);
-            padding-left: 0px;
-        }
+    @include phones {
+        font-size: torem(50px);
+        padding-left: 0px;
+    }
 
 }
 
@@ -140,13 +156,18 @@
     align-items: baseline;
     color: #e35028;
 
-    @include phones{font-size: torem(50px);}
+    @include phones {
+        font-size: torem(50px);
+    }
 
 }
 
 .sldr__val {
     font-size: torem(30px);
-    @include phones{font-size: torem(24px);}
+
+    @include phones {
+        font-size: torem(24px);
+    }
 }
 
 .sldr__ordrbtn {
@@ -167,8 +188,9 @@
     font-size: torem(18px);
     font-weight: normal;
     padding-left: torem(12px);
-    @include tablets{
-        padding-left: 0px; 
+
+    @include tablets {
+        padding-left: 0px;
     }
 }
 
@@ -184,6 +206,7 @@
         max-width: 80%;
         max-height: 80%;
     }
+
     @include phones {
         max-width: 90%;
     }
@@ -203,9 +226,113 @@
         margin-right: 10%;
         align-content: center;
     }
-    
+
 }
 
-.tester_slider{display: block}
-.slider__inline{display: flex;
-    overflow: hidden;}
+.tester_slider {
+    display: block
+}
+
+.slider__inline {
+    display: flex;
+    overflow: hidden;
+}
+
+.comp__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.9;
+    left: 9.5%;
+    width: 30%;
+    z-index: 3;
+    border-radius: 5px;
+    @include tablets{    left: 28.5%;
+        top: 15%;
+        width: 47%;
+    }
+    @include phones{ 
+        left: 27.5%;
+        top: 3%;
+        width: 75%;}
+
+}
+
+.comp__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include tablets{
+        width: 70%;
+    }
+
+    &:last-child {
+        margin-bottom: 15px;
+    }
+
+}
+
+.comp__text {
+    color: #2f3234;
+    font-family: 'Ubuntu';
+    font-size: torem(14px);
+    font-weight: 500;
+}
+
+.comp__numbers {
+    color: #2f3234;
+    font-family: 'Ubuntu';
+    font-size: torem(14px);
+    font-weight: 300;
+}
+
+
+.comp__txtcnt {
+    display: flex;
+
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.close__comp {
+    display:none;
+    position: absolute;
+    right: torem(20px);
+    top: torem(26px);
+    width: torem(36px);
+    height: torem(36px);
+    @include tablets{
+        display:block;
+    }
+    
+  }
+  .close__comp:hover {
+    opacity: 1;
+  }
+  .close__comp:before, .close__comp:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    background: #e35028;
+    width: torem(24px);
+    height: torem(5px);
+    border-radius: torem(3px);
+    
+  }
+  .close__comp:before {
+    transform: rotate(45deg);
+  }
+  .close__comp:after {
+    transform: rotate(-45deg);
+  }
+
+  .comp__visible{display:flex;}
+  .slider__menu--act{
+    background-color: #e35028;
+  };

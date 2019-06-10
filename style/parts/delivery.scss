@@ -49,7 +49,7 @@ input.checkball {
 
 .form {
     display: flex;
-    width:90%;
+    width:80%;
     @include tablets{
         flex-direction: column;
         width: 70%;
@@ -146,7 +146,7 @@ textarea:focus {
     border: torem(2px) solid #f9b43b;
 }
 
-input:focus {
+input[type=text]:focus {
     outline: 0;
     border: torem(2px) solid #f9b43b;
 }

@@ -57,4 +57,41 @@ svg.social__icon{
          height: torem(60px);
     }
 
-    
+    .icon__play{display: inline-block;
+        width: torem(30px);
+        height: torem(35px);
+    }
+    .icon__volume{display: inline-block;
+        width: torem(30px);
+        height: torem(35px);
+    }
+
+    .icon__play-white{display: inline-block;
+        max-width: torem(82px);
+        max-height: torem(118px);
+        position: absolute;
+        opacity: 0.9;
+        @include phones{
+            display:none;   
+        }
+    }
+
+    .icon__play-black{
+        display:none;
+        @include phones{
+            top: 50%;
+            display: inline-block;
+            max-width: torem(72px);
+            max-height: torem(106px);
+            position: absolute;
+            opacity: 0.9;
+               
+        }
+    }
+
+    .comp__icon{display: inline-block;
+        width: torem(45px);
+        height: torem(40px);
+        margin-right: torem(10px);}
+
+        

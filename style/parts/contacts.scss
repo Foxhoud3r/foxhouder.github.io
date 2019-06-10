@@ -1,9 +1,11 @@
-.contacts {
+/*.contacts {
     background: url('../images/contacts/map_full.png') center center / cover no-repeat;
     position: relative;
     display: flex;
     justify-content: space-around;
-}
+}*/
+.map{height:100vh;
+width:100%}
 
 .contact__info {
     display: flex;
